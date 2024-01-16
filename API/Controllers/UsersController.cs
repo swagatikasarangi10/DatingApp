@@ -1,12 +1,12 @@
-﻿using API.Data;
+﻿using API.bin;
+using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
-[ApiController]
-[Route("api/[controller]")]// url: /api/users
-public class UsersController: ControllerBase
+
+public class UsersController: BaseApiController
 {
     private readonly DataContext _context;
     public UsersController(DataContext context)
